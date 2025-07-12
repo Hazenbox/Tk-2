@@ -940,6 +940,7 @@ button:contains("Submit"),
 *:contains("Send") {
   background-color: #5c0601 !important;
   color: white !important;
+  border-color: #5c0601 !important;
 }
 
 .send-message-button *,
@@ -956,10 +957,78 @@ button[type="submit"],
 input[type="submit"] {
   background-color: #5c0601 !important;
   color: white !important;
+  border-color: #5c0601 !important;
 }
 
 button[type="submit"] *,
 input[type="submit"] * {
+  color: white !important;
+}
+
+/* PRINCIPAL DEVELOPER - SEND MESSAGE BUTTON PRIMARY BROWN STYLING */
+/* Target buttons containing "Send Message" text */
+button {
+  transition: all 0.3s ease !important;
+}
+
+/* Hover effects for send message buttons */
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(92, 6, 1, 0.3);
+}
+
+/* Focus states for accessibility */
+button:focus {
+  outline: 2px solid #5c0601 !important;
+  outline-offset: 2px !important;
+}
+
+/* Loading state styling */
+button[disabled] {
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+/* Contact form specific styling */
+.contact-modal button,
+.contact-dialog button,
+[class*="contact"] button,
+[class*="modal"] button,
+[class*="dialog"] button {
+  background-color: #5c0601 !important;
+  color: white !important;
+  border-color: #5c0601 !important;
+  font-weight: 500 !important;
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
+  font-family: 'Fustat', sans-serif !important;
+}
+
+.contact-modal button *,
+.contact-dialog button *,
+[class*="contact"] button *,
+[class*="modal"] button *,
+[class*="dialog"] button * {
+  color: white !important;
+}
+
+/* Target React modal buttons specifically */
+[class*="fixed"][class*="z-50"] button,
+[class*="max-w-6xl"] button,
+[class*="sm:max-w-md"] button,
+[role="dialog"] button,
+[data-state="open"] button {
+  background-color: #5c0601 !important;
+  color: white !important;
+  border-color: #5c0601 !important;
+}
+
+[class*="fixed"][class*="z-50"] button *,
+[class*="max-w-6xl"] button *,
+[class*="sm:max-w-md"] button *,
+[role="dialog"] button *,
+[data-state="open"] button * {
   color: white !important;
 }
 
@@ -1191,6 +1260,30 @@ div[class*="shadow-lg"][class*="bg-gradient-to-br"] {
 /* Target any element with group class and gradient */
 [class*="group"][class*="bg-gradient-to-br"] {
   background: linear-gradient(to bottom right, #F5F5F0, #E5D5C8) !important;
+}
+
+/* BHARAT VR CARD SIZE INCREASE - 25% SCALE */
+/* Target the specific Bharat VR card and increase size by 25% while maintaining aspect ratios */
+[class*="bg-gradient-to-br"][class*="from-pebble-offWhite"][class*="to-pebble-lightBlue"][class*="border-pebble-lightBeige"]:has(img[alt*="Bharat VR"]),
+[class*="bg-gradient-to-br"][class*="shadow-lg"][class*="rounded-lg"][class*="overflow-hidden"][class*="group"]:has(img[alt*="Bharat VR"]),
+[class*="bg-gradient-to-br"][class*="group"]:has(img[alt*="Bharat VR"]),
+[class*="bg-gradient-to-br"][class*="group"]:has(h3:contains("Bharat VR")),
+div:has(img[alt*="Bharat VR - Virtual Reality Experience"]),
+div:has(h3:contains("Bharat VR")),
+div:has(p:contains("An immersive virtual reality platform designed to showcase India's cultural heritage")) {
+  transform: scale(1.25) !important;
+  transform-origin: center !important;
+  margin: 1.5rem !important; /* Add margin to prevent overlap with other elements */
+  z-index: 1 !important; /* Ensure it appears above other elements */
+}
+
+/* Alternative targeting for browsers that don't support :has() */
+[class*="bg-gradient-to-br"][class*="from-pebble-offWhite"][class*="to-pebble-lightBlue"][class*="border-pebble-lightBeige"]:nth-child(1),
+[class*="bg-gradient-to-br"][class*="shadow-lg"][class*="rounded-lg"][class*="overflow-hidden"][class*="group"]:first-child {
+  transform: scale(1.25) !important;
+  transform-origin: center !important;
+  margin: 1.5rem !important;
+  z-index: 1 !important;
 }
 
 /* Body Text Color Update - Dark Grey for Brand Consistency */
@@ -1683,8 +1776,7 @@ footer .text-sm {
 /* Target copyright text specifically */
 *:contains("© 2025 Trikonantara"),
 *:contains("contactus@trikonantara.com"),
-*:contains("+91 9493803629"),
-*:contains("18-4-174, Near Munurkapu") {
+*:contains("+91 9493803629") {
   color: #1A1A1A !important;
 }
 
@@ -1794,6 +1886,171 @@ footer div[class*="space-y-2"] * {
 [class*="hero-section"] button:contains("Get in Touch") *,
 [class*="hero-section"] button:contains("GET IN TOUCH") * {
   color: #5c0601 !important;
+}
+
+/* HERO SECTION - GET IN TOUCH BUTTON ARROW ICON FIX */
+/* Target the arrow icon specifically in all button states */
+#hero-section button:contains("Get in Touch") svg,
+#hero-section button:contains("GET IN TOUCH") svg,
+[class*="hero-section"] button:contains("Get in Touch") svg,
+[class*="hero-section"] button:contains("GET IN TOUCH") svg,
+#hero-section button:contains("Get in Touch") svg *,
+#hero-section button:contains("GET IN TOUCH") svg *,
+[class*="hero-section"] button:contains("Get in Touch") svg *,
+[class*="hero-section"] button:contains("GET IN TOUCH") svg * {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* Target arrow icons with specific classes */
+#hero-section button:contains("Get in Touch") .ml-2,
+#hero-section button:contains("GET IN TOUCH") .ml-2,
+[class*="hero-section"] button:contains("Get in Touch") .ml-2,
+[class*="hero-section"] button:contains("GET IN TOUCH") .ml-2,
+#hero-section button:contains("Get in Touch") [class*="ml-2"],
+#hero-section button:contains("GET IN TOUCH") [class*="ml-2"],
+[class*="hero-section"] button:contains("Get in Touch") [class*="ml-2"],
+[class*="hero-section"] button:contains("GET IN TOUCH") [class*="ml-2"] {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* Target h-5 w-5 icons (arrow dimensions) */
+#hero-section button:contains("Get in Touch") [class*="h-5"][class*="w-5"],
+#hero-section button:contains("GET IN TOUCH") [class*="h-5"][class*="w-5"],
+[class*="hero-section"] button:contains("Get in Touch") [class*="h-5"][class*="w-5"],
+[class*="hero-section"] button:contains("GET IN TOUCH") [class*="h-5"][class*="w-5"] {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* HOVER STATE - Maintain brand brown */
+#hero-section button:contains("Get in Touch"):hover svg,
+#hero-section button:contains("GET IN TOUCH"):hover svg,
+[class*="hero-section"] button:contains("Get in Touch"):hover svg,
+[class*="hero-section"] button:contains("GET IN TOUCH"):hover svg,
+#hero-section button:contains("Get in Touch"):hover svg *,
+#hero-section button:contains("GET IN TOUCH"):hover svg *,
+[class*="hero-section"] button:contains("Get in Touch"):hover svg *,
+[class*="hero-section"] button:contains("GET IN TOUCH"):hover svg *,
+#hero-section button:contains("Get in Touch"):hover .ml-2,
+#hero-section button:contains("GET IN TOUCH"):hover .ml-2,
+[class*="hero-section"] button:contains("Get in Touch"):hover .ml-2,
+[class*="hero-section"] button:contains("GET IN TOUCH"):hover .ml-2,
+#hero-section button:contains("Get in Touch"):hover [class*="ml-2"],
+#hero-section button:contains("GET IN TOUCH"):hover [class*="ml-2"],
+[class*="hero-section"] button:contains("Get in Touch"):hover [class*="ml-2"],
+[class*="hero-section"] button:contains("GET IN TOUCH"):hover [class*="ml-2"],
+#hero-section button:contains("Get in Touch"):hover [class*="h-5"][class*="w-5"],
+#hero-section button:contains("GET IN TOUCH"):hover [class*="h-5"][class*="w-5"],
+[class*="hero-section"] button:contains("Get in Touch"):hover [class*="h-5"][class*="w-5"],
+[class*="hero-section"] button:contains("GET IN TOUCH"):hover [class*="h-5"][class*="w-5"] {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* FOCUS STATE - Maintain brand brown */
+#hero-section button:contains("Get in Touch"):focus svg,
+#hero-section button:contains("GET IN TOUCH"):focus svg,
+[class*="hero-section"] button:contains("Get in Touch"):focus svg,
+[class*="hero-section"] button:contains("GET IN TOUCH"):focus svg,
+#hero-section button:contains("Get in Touch"):focus svg *,
+#hero-section button:contains("GET IN TOUCH"):focus svg *,
+[class*="hero-section"] button:contains("Get in Touch"):focus svg *,
+[class*="hero-section"] button:contains("GET IN TOUCH"):focus svg *,
+#hero-section button:contains("Get in Touch"):focus .ml-2,
+#hero-section button:contains("GET IN TOUCH"):focus .ml-2,
+[class*="hero-section"] button:contains("Get in Touch"):focus .ml-2,
+[class*="hero-section"] button:contains("GET IN TOUCH"):focus .ml-2,
+#hero-section button:contains("Get in Touch"):focus [class*="ml-2"],
+#hero-section button:contains("GET IN TOUCH"):focus [class*="ml-2"],
+[class*="hero-section"] button:contains("Get in Touch"):focus [class*="ml-2"],
+[class*="hero-section"] button:contains("GET IN TOUCH"):focus [class*="ml-2"],
+#hero-section button:contains("Get in Touch"):focus [class*="h-5"][class*="w-5"],
+#hero-section button:contains("GET IN TOUCH"):focus [class*="h-5"][class*="w-5"],
+[class*="hero-section"] button:contains("Get in Touch"):focus [class*="h-5"][class*="w-5"],
+[class*="hero-section"] button:contains("GET IN TOUCH"):focus [class*="h-5"][class*="w-5"] {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* ACTIVE STATE - Maintain brand brown */
+#hero-section button:contains("Get in Touch"):active svg,
+#hero-section button:contains("GET IN TOUCH"):active svg,
+[class*="hero-section"] button:contains("Get in Touch"):active svg,
+[class*="hero-section"] button:contains("GET IN TOUCH"):active svg,
+#hero-section button:contains("Get in Touch"):active svg *,
+#hero-section button:contains("GET IN TOUCH"):active svg *,
+[class*="hero-section"] button:contains("Get in Touch"):active svg *,
+[class*="hero-section"] button:contains("GET IN TOUCH"):active svg *,
+#hero-section button:contains("Get in Touch"):active .ml-2,
+#hero-section button:contains("GET IN TOUCH"):active .ml-2,
+[class*="hero-section"] button:contains("Get in Touch"):active .ml-2,
+[class*="hero-section"] button:contains("GET IN TOUCH"):active .ml-2,
+#hero-section button:contains("Get in Touch"):active [class*="ml-2"],
+#hero-section button:contains("GET IN TOUCH"):active [class*="ml-2"],
+[class*="hero-section"] button:contains("Get in Touch"):active [class*="ml-2"],
+[class*="hero-section"] button:contains("GET IN TOUCH"):active [class*="ml-2"],
+#hero-section button:contains("Get in Touch"):active [class*="h-5"][class*="w-5"],
+#hero-section button:contains("GET IN TOUCH"):active [class*="h-5"][class*="w-5"],
+[class*="hero-section"] button:contains("Get in Touch"):active [class*="h-5"][class*="w-5"],
+[class*="hero-section"] button:contains("GET IN TOUCH"):active [class*="h-5"][class*="w-5"] {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* FALLBACK - Target any button containing "Get in Touch" in hero areas with maximum specificity */
+html body #hero-section button svg,
+html body [class*="hero"] button svg,
+html body section button:contains("Get in Touch") svg,
+html body section button:contains("GET IN TOUCH") svg,
+html body #hero-section button [class*="ml-2"],
+html body [class*="hero"] button [class*="ml-2"],
+html body section button:contains("Get in Touch") [class*="ml-2"],
+html body section button:contains("GET IN TOUCH") [class*="ml-2"],
+html body #hero-section button [class*="h-5"][class*="w-5"],
+html body [class*="hero"] button [class*="h-5"][class*="w-5"],
+html body section button:contains("Get in Touch") [class*="h-5"][class*="w-5"],
+html body section button:contains("GET IN TOUCH") [class*="h-5"][class*="w-5"] {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* Nuclear option - Override any possible button state */
+html body #hero-section button:hover svg,
+html body #hero-section button:focus svg,
+html body #hero-section button:active svg,
+html body #hero-section button:visited svg,
+html body [class*="hero"] button:hover svg,
+html body [class*="hero"] button:focus svg,
+html body [class*="hero"] button:active svg,
+html body [class*="hero"] button:visited svg,
+html body #hero-section button:hover [class*="ml-2"],
+html body #hero-section button:focus [class*="ml-2"],
+html body #hero-section button:active [class*="ml-2"],
+html body #hero-section button:visited [class*="ml-2"],
+html body [class*="hero"] button:hover [class*="ml-2"],
+html body [class*="hero"] button:focus [class*="ml-2"],
+html body [class*="hero"] button:active [class*="ml-2"],
+html body [class*="hero"] button:visited [class*="ml-2"],
+html body #hero-section button:hover [class*="h-5"][class*="w-5"],
+html body #hero-section button:focus [class*="h-5"][class*="w-5"],
+html body #hero-section button:active [class*="h-5"][class*="w-5"],
+html body #hero-section button:visited [class*="h-5"][class*="w-5"],
+html body [class*="hero"] button:hover [class*="h-5"][class*="w-5"],
+html body [class*="hero"] button:focus [class*="h-5"][class*="w-5"],
+html body [class*="hero"] button:active [class*="h-5"][class*="w-5"],
+html body [class*="hero"] button:visited [class*="h-5"][class*="w-5"] {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
 }
 
 /* Target any element in about section with specific text */
@@ -2124,3 +2381,355 @@ svg[viewBox="0 0 24 24"]:has(circle[cx="4"][cy="4"][r="2"]) * {
   fill: white !important;
   stroke: white !important;
 } 
+
+/* PRINCIPAL DEVELOPER - OUR SERVICES SECTION ICON FIX */
+/* Target service icons specifically in services section */
+#services-section svg,
+[class*="services-section"] svg,
+[class*="service-section"] svg,
+section:has(*:contains("Our Services")) svg,
+section:has(*:contains("Making cutting-edge")) svg,
+section:has(*:contains("Making Cutting-Edge")) svg {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+#services-section svg *,
+[class*="services-section"] svg *,
+[class*="service-section"] svg *,
+section:has(*:contains("Our Services")) svg *,
+section:has(*:contains("Making cutting-edge")) svg *,
+section:has(*:contains("Making Cutting-Edge")) svg * {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* Target lucide icons specifically in services section */
+#services-section .lucide,
+[class*="services-section"] .lucide,
+[class*="service-section"] .lucide,
+section:has(*:contains("Our Services")) .lucide,
+section:has(*:contains("Making cutting-edge")) .lucide,
+section:has(*:contains("Making Cutting-Edge")) .lucide {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* Target specific lucide icon classes in services section */
+#services-section .lucide-box,
+#services-section .lucide-building2,
+#services-section .lucide-mail,
+#services-section .lucide-mappin,
+#services-section .lucide-phone,
+[class*="services-section"] .lucide-box,
+[class*="services-section"] .lucide-building2,
+[class*="services-section"] .lucide-mail,
+[class*="services-section"] .lucide-mappin,
+[class*="services-section"] .lucide-phone,
+[class*="service-section"] .lucide-box,
+[class*="service-section"] .lucide-building2,
+[class*="service-section"] .lucide-mail,
+[class*="service-section"] .lucide-mappin,
+[class*="service-section"] .lucide-phone {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* Target any SVG in elements containing service-related text */
+*:contains("AR/VR Innovation") svg,
+*:contains("Custom Solutions") svg,
+*:contains("Consultation") svg,
+*:contains("Technical Support") svg,
+*:contains("Contact Us") svg,
+*:contains("ar/vr innovation") svg,
+*:contains("custom solutions") svg,
+*:contains("consultation") svg,
+*:contains("technical support") svg,
+*:contains("contact us") svg {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* Override any white/masked appearance for service icons */
+#services-section svg[stroke="currentColor"],
+[class*="services-section"] svg[stroke="currentColor"],
+[class*="service-section"] svg[stroke="currentColor"] {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+}
+
+/* Target service cards or containers */
+.service-card svg,
+.service-item svg,
+[class*="service-card"] svg,
+[class*="service-item"] svg,
+[class*="service"] svg {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* Target any icon that might be in a service context */
+section svg[class*="lucide"],
+.section svg[class*="lucide"],
+[class*="section"] svg[class*="lucide"] {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* Override any existing color rules for service icons */
+#services-section svg path,
+#services-section svg rect,
+#services-section svg circle,
+#services-section svg line,
+[class*="services-section"] svg path,
+[class*="services-section"] svg rect,
+[class*="services-section"] svg circle,
+[class*="services-section"] svg line {
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* PRINCIPAL DEVELOPER - NUCLEAR APPROACH FOR SERVICE ICONS */
+/* Target ALL SVGs that might be service icons and force brand brown color */
+svg[class*="lucide"]:not(.about-dialog *):not([class*="fixed"] *):not([class*="modal"] *):not([role="dialog"] *) {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* Target service icons by their typical positioning/styling */
+[class*="grid"] svg,
+[class*="flex"] svg:not(.about-dialog *):not([class*="fixed"] *):not([class*="modal"] *):not([role="dialog"] *),
+[class*="space-y"] svg,
+[class*="gap-"] svg:not(.about-dialog *):not([class*="fixed"] *):not([class*="modal"] *):not([role="dialog"] *) {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* Target main content area icons (excluding modals) */
+main svg,
+.main svg,
+[class*="main"] svg,
+[class*="content"] svg:not(.about-dialog *):not([class*="fixed"] *):not([class*="modal"] *):not([role="dialog"] *) {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* NUCLEAR APPROACH FOR BOX ICON - OVERRIDE ALL WHITE INLINE STYLES */
+/* Target the specific box icon with maximum specificity */
+svg.lucide-box,
+svg.lucide-box *,
+svg.lucide-box path,
+svg.lucide-box rect,
+svg.lucide-box circle,
+svg.lucide-box line,
+svg[class*="lucide-box"],
+svg[class*="lucide-box"] *,
+svg[class*="lucide-box"] path,
+svg[class*="lucide-box"] rect,
+svg[class*="lucide-box"] circle,
+svg[class*="lucide-box"] line,
+.lucide-box,
+.lucide-box *,
+.lucide-box path,
+.lucide-box rect,
+.lucide-box circle,
+.lucide-box line {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* Target box icon by specific path signature */
+svg path[d*="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"],
+svg path[d*="m3.3 7 8.7 5 8.7-5"],
+svg path[d*="M12 22V12"] {
+  stroke: #5c0601 !important;
+  fill: none !important;
+  color: #5c0601 !important;
+}
+
+/* Override ANY SVG with box icon paths in services section */
+#services-section svg:has(path[d*="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"]),
+#services-section svg:has(path[d*="m3.3 7 8.7 5 8.7-5"]),
+#services-section svg:has(path[d*="M12 22V12"]),
+[class*="services-section"] svg:has(path[d*="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"]),
+[class*="services-section"] svg:has(path[d*="m3.3 7 8.7 5 8.7-5"]),
+[class*="services-section"] svg:has(path[d*="M12 22V12"]),
+[class*="service-section"] svg:has(path[d*="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"]),
+[class*="service-section"] svg:has(path[d*="m3.3 7 8.7 5 8.7-5"]),
+[class*="service-section"] svg:has(path[d*="M12 22V12"]) {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* Target service section SVGs with currentColor stroke */
+#services-section svg[stroke="currentColor"]:not(.about-dialog *):not([class*="fixed"] *):not([class*="modal"] *):not([role="dialog"] *),
+[class*="services-section"] svg[stroke="currentColor"]:not(.about-dialog *):not([class*="fixed"] *):not([class*="modal"] *):not([role="dialog"] *),
+[class*="service-section"] svg[stroke="currentColor"]:not(.about-dialog *):not([class*="fixed"] *):not([class*="modal"] *):not([role="dialog"] *) {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* Ultra-specific targeting for any SVG that might be the box icon */
+svg[viewBox="0 0 24 24"]:has(path[d*="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"]):not(.about-dialog *):not([class*="fixed"] *):not([class*="modal"] *):not([role="dialog"] *),
+svg[viewBox="0 0 24 24"]:has(path[d*="m3.3 7 8.7 5 8.7-5"]):not(.about-dialog *):not([class*="fixed"] *):not([class*="modal"] *):not([role="dialog"] *),
+svg[viewBox="0 0 24 24"]:has(path[d*="M12 22V12"]):not(.about-dialog *):not([class*="fixed"] *):not([class*="modal"] *):not([role="dialog"] *) {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* END OF PRINCIPAL DEVELOPER - OUR SERVICES SECTION ICON FIX */
+
+/* PRINCIPAL ENGINEER SOLUTION - LINKEDIN ICON BRAND BROWN OVERRIDE */
+/* COMPREHENSIVE STRATEGY: DEFAULT BROWN + REMOVE BLUE HOVER */
+
+/* NUCLEAR APPROACH 1: Override default text-pebble-charcoal to brown */
+html body .text-pebble-charcoal[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"],
+html body a.text-pebble-charcoal[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"],
+html body a[class~="text-pebble-charcoal"][href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"] {
+  color: #5c0601 !important;
+}
+
+/* NUCLEAR APPROACH 2: Override hover blue to brown */
+html body .hover\:text-\[\#0A66C2\]:hover,
+html body a.hover\:text-\[\#0A66C2\]:hover,
+html body a[class~="hover:text-[#0A66C2]"]:hover,
+html body a[class*="hover:text-[#0A66C2]"]:hover {
+  color: #5c0601 !important;
+}
+
+/* NUCLEAR APPROACH 3: Maximum specificity targeting - BOTH STATES */
+html body a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"],
+html body a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]:hover,
+html body a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"] svg,
+html body a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]:hover svg,
+html body a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"] .lucide-linkedin,
+html body a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]:hover .lucide-linkedin,
+html body a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"] path,
+html body a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]:hover path,
+html body a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"] rect,
+html body a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]:hover rect,
+html body a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"] circle,
+html body a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]:hover circle {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* NUCLEAR APPROACH 4: Target exact class combination - BOTH STATES */
+html body a[class~="text-pebble-charcoal"][class~="hover:text-[#0A66C2]"][class~="transition-colors"][class~="duration-300"],
+html body a[class~="text-pebble-charcoal"][class~="hover:text-[#0A66C2]"][class~="transition-colors"][class~="duration-300"]:hover,
+html body a[class~="text-pebble-charcoal"][class~="hover:text-[#0A66C2]"][class~="transition-colors"][class~="duration-300"] svg,
+html body a[class~="text-pebble-charcoal"][class~="hover:text-[#0A66C2]"][class~="transition-colors"][class~="duration-300"]:hover svg,
+html body a[class~="text-pebble-charcoal"][class~="hover:text-[#0A66C2]"][class~="transition-colors"][class~="duration-300"] .lucide-linkedin,
+html body a[class~="text-pebble-charcoal"][class~="hover:text-[#0A66C2]"][class~="transition-colors"][class~="duration-300"]:hover .lucide-linkedin {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* NUCLEAR APPROACH 5: Path-based targeting - BOTH STATES */
+html body a svg[viewBox="0 0 24 24"] path[d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"],
+html body a:hover svg[viewBox="0 0 24 24"] path[d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"],
+html body a svg[viewBox="0 0 24 24"] rect[width="4"][height="12"][x="2"][y="9"],
+html body a:hover svg[viewBox="0 0 24 24"] rect[width="4"][height="12"][x="2"][y="9"],
+html body a svg[viewBox="0 0 24 24"] circle[cx="4"][cy="4"][r="2"],
+html body a:hover svg[viewBox="0 0 24 24"] circle[cx="4"][cy="4"][r="2"] {
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* NUCLEAR APPROACH 6: SVG-specific targeting - BOTH STATES */
+html body svg.lucide-linkedin,
+html body svg.lucide-linkedin:hover,
+html body svg.lucide-linkedin *,
+html body svg.lucide-linkedin:hover *,
+html body a svg.lucide-linkedin,
+html body a:hover svg.lucide-linkedin,
+html body a svg.lucide-linkedin *,
+html body a:hover svg.lucide-linkedin *,
+html body a .lucide-linkedin,
+html body a:hover .lucide-linkedin,
+html body a .lucide-linkedin *,
+html body a:hover .lucide-linkedin * {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* NUCLEAR APPROACH 7: Override currentColor inheritance - BOTH STATES */
+html body a[href*="linkedin"] svg[stroke="currentColor"],
+html body a[href*="linkedin"]:hover svg[stroke="currentColor"],
+html body a[href*="linkedin"] svg[stroke="currentColor"] *,
+html body a[href*="linkedin"]:hover svg[stroke="currentColor"] *,
+html body a[href*="linkedin"] [stroke="currentColor"],
+html body a[href*="linkedin"]:hover [stroke="currentColor"],
+html body a[href*="linkedin"] [stroke="currentColor"] *,
+html body a[href*="linkedin"]:hover [stroke="currentColor"] * {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+}
+
+/* NUCLEAR APPROACH 8: Target all LinkedIn elements - BOTH STATES */
+html body *[href*="linkedin"],
+html body *[href*="linkedin"]:hover,
+html body *[href*="linkedin"] *,
+html body *[href*="linkedin"]:hover *,
+html body *[href*="linkedin"] svg,
+html body *[href*="linkedin"]:hover svg,
+html body *[href*="linkedin"] svg *,
+html body *[href*="linkedin"]:hover svg *,
+html body *[href*="linkedin"] path,
+html body *[href*="linkedin"]:hover path,
+html body *[href*="linkedin"] rect,
+html body *[href*="linkedin"]:hover rect,
+html body *[href*="linkedin"] circle,
+html body *[href*="linkedin"]:hover circle {
+  color: #5c0601 !important;
+  stroke: #5c0601 !important;
+  fill: none !important;
+}
+
+/* NUCLEAR APPROACH 9: Force color using CSS variables - BOTH STATES */
+html body a[href*="linkedin"],
+html body a[href*="linkedin"]:hover {
+  --text-color: #5c0601 !important;
+  --stroke-color: #5c0601 !important;
+  color: var(--text-color) !important;
+}
+
+html body a[href*="linkedin"] svg,
+html body a[href*="linkedin"]:hover svg,
+html body a[href*="linkedin"] svg *,
+html body a[href*="linkedin"]:hover svg * {
+  color: var(--text-color) !important;
+  stroke: var(--stroke-color) !important;
+}
+
+/* PRINCIPAL DEVELOPER FIX: Override text-center color for LinkedIn icons in about modal */
+.about-dialog [class*="text-center"] a[href*="linkedin"] *,
+.about-dialog [class*="text-center"] a[href*="LinkedIn"] *,
+.about-dialog [class*="text-center"] [class*="linkedin"] *,
+.about-dialog [class*="text-center"] [class*="LinkedIn"] *,
+.about-dialog [class*="text-center"] svg,
+.about-dialog [class*="text-center"] svg *,
+.about-dialog [class*="text-center"] svg path,
+.about-dialog [class*="text-center"] svg rect,
+.about-dialog [class*="text-center"] svg circle {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}

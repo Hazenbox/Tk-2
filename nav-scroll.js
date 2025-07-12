@@ -316,6 +316,15 @@ function initializeNavigation() {
   // Start continuous LinkedIn icon monitoring
   startLinkedInIconMonitoring();
   
+  // PRINCIPAL ENGINEER - NUCLEAR LINKEDIN COLOR OVERRIDE
+  enforceLinkedInColorOverride();
+  
+  // BHARAT VR CARD SIZE INCREASE - 25% SCALE
+  scaleBharatVRCard();
+  
+  // GET IN TOUCH BUTTON ARROW COLOR FIX
+  fixGetInTouchArrowColor();
+  
   // Ensure TRIKONANTARA logo color handling
   ensureTrikonantaraLogoColors();
   
@@ -382,8 +391,7 @@ function makeFooterTextDarker() {
       // Check if this element contains footer-specific text
       if (text.includes('© 2025 Trikonantara') || 
           text.includes('contactus@trikonantara.com') || 
-          text.includes('+91 9493803629') || 
-          text.includes('18-4-174, Near Munurkapu') ||
+          text.includes('+91 9493803629') ||
           text.includes('Trikonantara Innovation Technology') ||
           text.includes('All rights reserved')) {
         
@@ -885,7 +893,400 @@ function startLinkedInIconMonitoring() {
   }, 50); // Increased frequency for brutal monitoring
 }
 
+// PRINCIPAL ENGINEER SOLUTION - LINKEDIN BRAND BROWN COLOR OVERRIDE
+function enforceLinkedInColorOverride() {
+  console.log('PRINCIPAL ENGINEER: Initiating LinkedIn brand brown color override...');
+  
+  // APPROACH 1: Direct style override with maximum specificity
+  function forceLinkedInColor() {
+    // Target LinkedIn links specifically
+    const linkedInLinks = document.querySelectorAll('a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]');
+    
+    linkedInLinks.forEach(link => {
+      // Create a style element with maximum specificity
+      const style = document.createElement('style');
+      style.innerHTML = `
+        a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"],
+        a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]:hover,
+        a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"] *,
+        a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]:hover *,
+        a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"] svg,
+        a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]:hover svg,
+        a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"] svg *,
+        a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]:hover svg *,
+        a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"] path,
+        a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]:hover path,
+        a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"] rect,
+        a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]:hover rect,
+        a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"] circle,
+        a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]:hover circle {
+          color: #5c0601 !important;
+          stroke: #5c0601 !important;
+          fill: none !important;
+        }
+      `;
+      document.head.appendChild(style);
+      
+      // APPROACH 2: Event-based override - Both default and hover to brown
+      function setBrownColor() {
+        const svg = this.querySelector('svg');
+        if (svg) {
+          // Force color with multiple methods
+          svg.style.cssText = 'color: #5c0601 !important; stroke: #5c0601 !important; fill: none !important;';
+          svg.setAttribute('style', 'color: #5c0601 !important; stroke: #5c0601 !important; fill: none !important;');
+          
+          // Force all child elements
+          const allElements = svg.querySelectorAll('*');
+          allElements.forEach(el => {
+            el.style.cssText = 'color: #5c0601 !important; stroke: #5c0601 !important; fill: none !important;';
+            el.setAttribute('style', 'color: #5c0601 !important; stroke: #5c0601 !important; fill: none !important;');
+          });
+          
+          console.log('NUCLEAR OVERRIDE: LinkedIn icon forced to brand brown');
+        }
+        
+        // Also force the link itself
+        this.style.setProperty('color', '#5c0601', 'important');
+      }
+      
+      // Set brown color on both hover and leave
+      link.addEventListener('mouseenter', setBrownColor);
+      link.addEventListener('mouseleave', setBrownColor);
+      
+      // Apply brown color immediately
+      setBrownColor.call(link);
+      
+      // APPROACH 3: Remove conflicting classes and add our own
+      link.addEventListener('mouseenter', function() {
+        // Remove Tailwind hover class
+        this.classList.remove('hover:text-[#0A66C2]');
+        // Add our override class
+        this.classList.add('linkedin-brand-brown-override');
+      });
+      
+      link.addEventListener('mouseleave', function() {
+        // Keep brown color, don't restore blue
+        this.classList.remove('hover:text-[#0A66C2]');
+        this.classList.add('linkedin-brand-brown-override');
+      });
+    });
+  }
+  
+  // APPROACH 4: Mutation Observer to handle dynamic content
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.type === 'childList') {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            // Check if new LinkedIn links were added
+            const linkedInLinks = node.querySelectorAll('a[href*="linkedin.com/company/trikonantara-innovation-technology-private-limited"]');
+            if (linkedInLinks.length > 0) {
+              console.log('NUCLEAR OVERRIDE: New LinkedIn links detected, applying override...');
+              setTimeout(forceLinkedInColor, 100);
+            }
+          }
+        });
+      }
+    });
+  });
+  
+  // Start observing
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+  
+  // APPROACH 5: CSS injection with highest possible specificity
+  const ultimateStyle = document.createElement('style');
+  ultimateStyle.innerHTML = `
+    /* PRINCIPAL ENGINEER NUCLEAR OVERRIDE - BRAND BROWN */
+    html body div main footer a[href*="linkedin"],
+    html body div main footer a[href*="linkedin"]:hover,
+    html body div main footer a[href*="linkedin"] *,
+    html body div main footer a[href*="linkedin"]:hover *,
+    html body div main footer a[href*="linkedin"] svg,
+    html body div main footer a[href*="linkedin"]:hover svg,
+    html body div main footer a[href*="linkedin"] svg *,
+    html body div main footer a[href*="linkedin"]:hover svg *,
+    html body div main footer a[href*="linkedin"] path,
+    html body div main footer a[href*="linkedin"]:hover path,
+    html body div main footer a[href*="linkedin"] rect,
+    html body div main footer a[href*="linkedin"]:hover rect,
+    html body div main footer a[href*="linkedin"] circle,
+    html body div main footer a[href*="linkedin"]:hover circle {
+      color: #5c0601 !important;
+      stroke: #5c0601 !important;
+      fill: none !important;
+    }
+    
+    /* Override Tailwind's compiled class with even higher specificity */
+    html body .hover\\:text-\\[\\#0A66C2\\],
+    html body .hover\\:text-\\[\\#0A66C2\\]:hover,
+    html body .hover\\:text-\\[\\#0A66C2\\] svg,
+    html body .hover\\:text-\\[\\#0A66C2\\]:hover svg,
+    html body .hover\\:text-\\[\\#0A66C2\\] svg *,
+    html body .hover\\:text-\\[\\#0A66C2\\]:hover svg *,
+    html body .hover\\:text-\\[\\#0A66C2\\] path,
+    html body .hover\\:text-\\[\\#0A66C2\\]:hover path,
+    html body .hover\\:text-\\[\\#0A66C2\\] rect,
+    html body .hover\\:text-\\[\\#0A66C2\\]:hover rect,
+    html body .hover\\:text-\\[\\#0A66C2\\] circle,
+    html body .hover\\:text-\\[\\#0A66C2\\]:hover circle {
+      color: #5c0601 !important;
+      stroke: #5c0601 !important;
+      fill: none !important;
+    }
+    
+    /* Custom override class */
+    .linkedin-brand-brown-override,
+    .linkedin-brand-brown-override *,
+    .linkedin-brand-brown-override svg,
+    .linkedin-brand-brown-override svg *,
+    .linkedin-brand-brown-override path,
+    .linkedin-brand-brown-override rect,
+    .linkedin-brand-brown-override circle {
+      color: #5c0601 !important;
+      stroke: #5c0601 !important;
+      fill: none !important;
+    }
+  `;
+  document.head.appendChild(ultimateStyle);
+  
+  // APPROACH 6: Continuous monitoring and enforcement
+  setInterval(() => {
+    forceLinkedInColor();
+    
+    // Double-check all LinkedIn icons - Force brown color always
+    const allLinkedInSvgs = document.querySelectorAll('a[href*="linkedin"] svg, .lucide-linkedin');
+    allLinkedInSvgs.forEach(svg => {
+      const parentLink = svg.closest('a[href*="linkedin"]');
+      if (parentLink) {
+        // Force brown color regardless of hover state
+        svg.style.cssText = 'color: #5c0601 !important; stroke: #5c0601 !important; fill: none !important;';
+        
+        const allChildren = svg.querySelectorAll('*');
+        allChildren.forEach(child => {
+          child.style.cssText = 'color: #5c0601 !important; stroke: #5c0601 !important; fill: none !important;';
+        });
+        
+        // Also force the parent link
+        parentLink.style.setProperty('color', '#5c0601', 'important');
+      }
+    });
+  }, 100); // Check every 100ms for maximum responsiveness
+  
+  // Initial run
+  forceLinkedInColor();
+  
+  console.log('PRINCIPAL ENGINEER: LinkedIn brand brown color override deployed successfully');
+}
 
+// BHARAT VR CARD SIZE INCREASE - 25% SCALE FUNCTION
+function scaleBharatVRCard() {
+  console.log('BHARAT VR: Initiating card size increase by 25%...');
+  
+  // Multiple targeting strategies for maximum compatibility
+  function applyBharatVRScaling() {
+    // Strategy 1: Target by image alt text
+    const bharatVRImages = document.querySelectorAll('img[alt*="Bharat VR"]');
+    bharatVRImages.forEach(img => {
+      const card = img.closest('div[class*="bg-gradient-to-br"]') || 
+                   img.closest('div[class*="shadow-lg"]') || 
+                   img.closest('div[class*="rounded-lg"]') ||
+                   img.closest('div[class*="group"]');
+      
+      if (card) {
+        card.style.transform = 'scale(1.25)';
+        card.style.transformOrigin = 'center';
+        card.style.margin = '1.5rem';
+        card.style.zIndex = '1';
+        card.style.position = 'relative';
+        console.log('BHARAT VR: Card scaled via image alt text');
+      }
+    });
+    
+    // Strategy 2: Target by heading text
+    const bharatVRHeadings = document.querySelectorAll('h3');
+    bharatVRHeadings.forEach(h3 => {
+      if (h3.textContent.includes('Bharat VR')) {
+        const card = h3.closest('div[class*="bg-gradient-to-br"]') || 
+                     h3.closest('div[class*="shadow-lg"]') || 
+                     h3.closest('div[class*="rounded-lg"]') ||
+                     h3.closest('div[class*="group"]');
+        
+        if (card) {
+          card.style.transform = 'scale(1.25)';
+          card.style.transformOrigin = 'center';
+          card.style.margin = '1.5rem';
+          card.style.zIndex = '1';
+          card.style.position = 'relative';
+          console.log('BHARAT VR: Card scaled via heading text');
+        }
+      }
+    });
+    
+    // Strategy 3: Target by description text
+    const bharatVRDescriptions = document.querySelectorAll('p');
+    bharatVRDescriptions.forEach(p => {
+      if (p.textContent.includes('An immersive virtual reality platform designed to showcase India\'s cultural heritage')) {
+        const card = p.closest('div[class*="bg-gradient-to-br"]') || 
+                     p.closest('div[class*="shadow-lg"]') || 
+                     p.closest('div[class*="rounded-lg"]') ||
+                     p.closest('div[class*="group"]');
+        
+        if (card) {
+          card.style.transform = 'scale(1.25)';
+          card.style.transformOrigin = 'center';
+          card.style.margin = '1.5rem';
+          card.style.zIndex = '1';
+          card.style.position = 'relative';
+          console.log('BHARAT VR: Card scaled via description text');
+        }
+      }
+    });
+    
+    // Strategy 4: Target by specific image path
+    const bharatVRSpecificImages = document.querySelectorAll('img[src*="f208b926-b130-4b04-aa8c-5ebd9ef7f2ba"]');
+    bharatVRSpecificImages.forEach(img => {
+      const card = img.closest('div[class*="bg-gradient-to-br"]') || 
+                   img.closest('div[class*="shadow-lg"]') || 
+                   img.closest('div[class*="rounded-lg"]') ||
+                   img.closest('div[class*="group"]');
+      
+      if (card) {
+        card.style.transform = 'scale(1.25)';
+        card.style.transformOrigin = 'center';
+        card.style.margin = '1.5rem';
+        card.style.zIndex = '1';
+        card.style.position = 'relative';
+        console.log('BHARAT VR: Card scaled via specific image path');
+      }
+    });
+  }
+  
+  // Apply scaling immediately
+  applyBharatVRScaling();
+  
+  // Monitor for dynamic content and reapply scaling if needed
+  const observer = new MutationObserver(() => {
+    applyBharatVRScaling();
+  });
+  
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+  
+  // Fallback: Apply scaling every 500ms for the first 5 seconds
+  let attempts = 0;
+  const maxAttempts = 10;
+  
+  const fallbackInterval = setInterval(() => {
+    applyBharatVRScaling();
+    attempts++;
+    
+    if (attempts >= maxAttempts) {
+      clearInterval(fallbackInterval);
+    }
+  }, 500);
+  
+  console.log('BHARAT VR: Card scaling system deployed successfully');
+}
+
+// GET IN TOUCH BUTTON ARROW COLOR FIX FUNCTION
+function fixGetInTouchArrowColor() {
+  console.log('GET IN TOUCH: Initiating arrow color fix...');
+  
+  function applyArrowColorFix() {
+    // Target Get in Touch buttons in hero section
+    const getInTouchButtons = document.querySelectorAll('button');
+    
+    getInTouchButtons.forEach(button => {
+      const buttonText = button.textContent || button.innerText || '';
+      
+      // Check if this is a Get in Touch button
+      if (buttonText.includes('Get in Touch') || buttonText.includes('GET IN TOUCH')) {
+        // Check if it's in hero section
+        const heroSection = button.closest('#hero-section') || 
+                           button.closest('[class*="hero"]') ||
+                           button.closest('section');
+        
+        if (heroSection) {
+          // Find all SVG elements and arrows within this button
+          const svgElements = button.querySelectorAll('svg, [class*="ml-2"], [class*="h-5"][class*="w-5"]');
+          
+          svgElements.forEach(element => {
+            // Apply brand brown color to the element
+            element.style.color = '#5c0601';
+            element.style.stroke = '#5c0601';
+            element.style.fill = 'none';
+            
+            // Apply to all child elements
+            const children = element.querySelectorAll('*');
+            children.forEach(child => {
+              child.style.color = '#5c0601';
+              child.style.stroke = '#5c0601';
+              child.style.fill = 'none';
+            });
+          });
+          
+          // Add event listeners to maintain color during all interactions
+          ['mousedown', 'mouseup', 'click', 'focus', 'blur', 'touchstart', 'touchend'].forEach(eventType => {
+            button.addEventListener(eventType, function() {
+              setTimeout(() => {
+                const svgs = this.querySelectorAll('svg, [class*="ml-2"], [class*="h-5"][class*="w-5"]');
+                svgs.forEach(svg => {
+                  svg.style.color = '#5c0601';
+                  svg.style.stroke = '#5c0601';
+                  svg.style.fill = 'none';
+                  
+                  const children = svg.querySelectorAll('*');
+                  children.forEach(child => {
+                    child.style.color = '#5c0601';
+                    child.style.stroke = '#5c0601';
+                    child.style.fill = 'none';
+                  });
+                });
+              }, 10); // Small delay to override any other color changes
+            });
+          });
+          
+          console.log('GET IN TOUCH: Arrow color fixed for button:', button);
+        }
+      }
+    });
+  }
+  
+  // Apply fix immediately
+  applyArrowColorFix();
+  
+  // Monitor for dynamic content changes
+  const observer = new MutationObserver(() => {
+    applyArrowColorFix();
+  });
+  
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['style', 'class']
+  });
+  
+  // Continuous monitoring every 100ms for the first 5 seconds
+  let attempts = 0;
+  const maxAttempts = 50;
+  
+  const fixInterval = setInterval(() => {
+    applyArrowColorFix();
+    attempts++;
+    
+    if (attempts >= maxAttempts) {
+      clearInterval(fixInterval);
+    }
+  }, 100);
+  
+  console.log('GET IN TOUCH: Arrow color fix system deployed successfully');
+}
 
 // Try to initialize immediately
 initializeNavigation();
