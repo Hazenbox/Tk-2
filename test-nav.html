@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Test</title>
+    <link rel="stylesheet" href="custom-nav.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 200vh; /* Make page scrollable */
+        }
+        header {
+            background: blue;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .content {
+            padding: 2rem;
+            background: #f0f0f0;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Test Navigation</h1>
+        <nav>
+            <a href="#" style="color: #0b2d5f;">Home</a>
+            <a href="#" style="color: #0b2d5f;">About</a>
+            <a href="#" style="color: #0b2d5f;">Services</a>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <h2>Scroll down to test navigation</h2>
+        <p>This is a test page to verify the navigation scroll functionality.</p>
+        <p>When you scroll down, the navigation should float and text color should change to #5c0601.</p>
+    </div>
+
+    <script src="nav-scroll.js"></script>
+</body>
+</html> 

@@ -1,0 +1,1983 @@
+/* Navigation bar text color change on scroll */
+.navbar {
+  transition: color 0.3s ease;
+}
+
+.navbar.scrolled {
+  color: #5c0601 !important;
+}
+
+/* Header logo/name - keep white initially */
+header h1,
+header .logo,
+header .brand-name,
+header [class*="logo"],
+header [class*="brand"],
+header a[href="/"],
+nav h1,
+nav .logo,
+nav .brand-name,
+nav [class*="logo"],
+nav [class*="brand"],
+nav a[href="/"],
+.nav-floating h1,
+.nav-floating .logo,
+.nav-floating .brand-name,
+.nav-floating [class*="logo"],
+.nav-floating [class*="brand"],
+.nav-floating a[href="/"] {
+  color: white !important;
+}
+
+/* Only change header text to dark red when scrolled */
+.navbar.scrolled header h1,
+.navbar.scrolled header .logo,
+.navbar.scrolled header .brand-name,
+.navbar.scrolled header [class*="logo"],
+.navbar.scrolled header [class*="brand"],
+.navbar.scrolled header a[href="/"],
+.navbar.scrolled nav h1,
+.navbar.scrolled nav .logo,
+.navbar.scrolled nav .brand-name,
+.navbar.scrolled nav [class*="logo"],
+.navbar.scrolled nav [class*="brand"],
+.navbar.scrolled nav a[href="/"],
+.nav-floating.scrolled h1,
+.nav-floating.scrolled .logo,
+.nav-floating.scrolled .brand-name,
+.nav-floating.scrolled [class*="logo"],
+.nav-floating.scrolled [class*="brand"],
+.nav-floating.scrolled a[href="/"] {
+  color: #5c0601 !important;
+}
+
+/* Navigation links - change to dark red when scrolled */
+.navbar.scrolled nav a,
+.nav-floating.scrolled nav a,
+.navbar.scrolled a[href*="about"],
+.navbar.scrolled a[href*="services"],
+.navbar.scrolled a[href*="product"],
+.nav-floating.scrolled a[href*="about"],
+.nav-floating.scrolled a[href*="services"],
+.nav-floating.scrolled a[href*="product"] {
+  color: #5c0601 !important;
+}
+
+/* Target navigation links by text content */
+.navbar.scrolled *:contains("About"),
+.navbar.scrolled *:contains("Services"),
+.navbar.scrolled *:contains("Product"),
+.nav-floating.scrolled *:contains("About"),
+.nav-floating.scrolled *:contains("Services"),
+.nav-floating.scrolled *:contains("Product") {
+  color: #5c0601 !important;
+}
+
+/* Target elements with onClick handlers for navigation */
+.navbar.scrolled [onClick*="about"],
+.navbar.scrolled [onClick*="services"],
+.navbar.scrolled [onClick*="product"],
+.nav-floating.scrolled [onClick*="about"],
+.nav-floating.scrolled [onClick*="services"],
+.nav-floating.scrolled [onClick*="product"] {
+  color: #5c0601 !important;
+}
+
+/* Target elements with scrolled prop */
+.navbar.scrolled [scrolled],
+.nav-floating.scrolled [scrolled] {
+  color: #5c0601 !important;
+}
+
+/* Target any element containing navigation text when scrolled */
+.navbar.scrolled button:contains("About"),
+.navbar.scrolled button:contains("Services"),
+.navbar.scrolled button:contains("Product"),
+.nav-floating.scrolled button:contains("About"),
+.nav-floating.scrolled button:contains("Services"),
+.nav-floating.scrolled button:contains("Product") {
+  color: #5c0601 !important;
+}
+
+/* Target any element containing "Trikonantara" text - WHITE INITIALLY */
+*:contains("Trikonantara") {
+  color: white !important;
+}
+
+/* Change Trikonantara text to dark red only when scrolled */
+.navbar.scrolled *:contains("Trikonantara"),
+.nav-floating.scrolled *:contains("Trikonantara") {
+  color: #5c0601 !important;
+}
+
+/* Force white color for navigation elements initially */
+nav *,
+.nav-floating * {
+  color: white !important;
+}
+
+/* Change navigation text to dark red when scrolled */
+.navbar.scrolled nav *,
+.nav-floating.scrolled nav * {
+  color: #5c0601 !important;
+}
+
+/* Reset to white when NOT scrolled - more specific targeting */
+header:not(.scrolled) *,
+nav:not(.scrolled) *,
+.nav-floating:not(.scrolled) *,
+.navbar:not(.scrolled) * {
+  color: white !important;
+}
+
+/* Override any inline styles for initial state */
+[style*="color: rgb(11, 45, 95)"]:not(.scrolled),
+[style*="color: #0b2d5f"]:not(.scrolled),
+[style*="color: rgb(16, 30, 78)"]:not(.scrolled),
+[style*="color: #101E4E"]:not(.scrolled) {
+  color: white !important;
+}
+
+/* Background overlay color change */
+.hero-section::before {
+  background-color: rgba(92, 6, 1, 0.7) !important;
+}
+
+/* Target the specific background color used in the site */
+[class*="bg-[#101E4E]"] {
+  background-color: #5c0601 !important;
+}
+
+[class*="bg-[#101E4E]/90"] {
+  background-color: #5c0601 !important;
+}
+
+/* Target buttons with the specific background */
+button[class*="bg-[#101E4E]"],
+button[class*="bg-[#101E4E]/90"] {
+  background-color: #5c0601 !important;
+  color: white !important;
+}
+
+button[class*="bg-[#101E4E]"] *,
+button[class*="bg-[#101E4E]/90"] * {
+  color: white !important;
+}
+
+/* Target the Explore Our Story button specifically */
+button[class*="bg-[#101E4E]"] span,
+button[class*="bg-[#101E4E]/90"] span {
+  color: white !important;
+}
+
+/* Target the Our Team button */
+button[class*="border-[#101E4E]"] {
+  border-color: #5c0601 !important;
+  color: #5c0601 !important;
+  background-color: white !important;
+}
+
+button[class*="border-[#101E4E]"] * {
+  color: #5c0601 !important;
+}
+
+button[class*="border-[#101E4E]"]:hover {
+  background-color: #5c0601 !important;
+  color: white !important;
+}
+
+button[class*="border-[#101E4E]"]:hover * {
+  color: white !important;
+}
+
+/* Additional targeting for Our Team button text */
+button:contains("Our Team"),
+*:contains("Our Team") {
+  color: #5c0601 !important;
+}
+
+button:contains("Our Team") *,
+*:contains("Our Team") * {
+  color: #5c0601 !important;
+}
+
+/* Target any button with border styling that might be Our Team button */
+button[class*="border"],
+button[class*="border-"] {
+  color: #5c0601 !important;
+}
+
+button[class*="border"] *,
+button[class*="border-"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any button with white background and border */
+button[style*="background-color: white"],
+button[style*="background: white"],
+button[class*="bg-white"] {
+  color: #5c0601 !important;
+}
+
+button[style*="background-color: white"] *,
+button[style*="background: white"] *,
+button[class*="bg-white"] * {
+  color: #5c0601 !important;
+}
+
+/* Target specific classes from the minified JS */
+[class*="inline-flex"],
+[class*="items-center"] {
+  color: #5c0601 !important;
+}
+
+[class*="inline-flex"] *,
+[class*="items-center"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with ml-2 class (margin-left) */
+[class*="ml-2"] {
+  color: #5c0601 !important;
+}
+
+[class*="ml-2"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with h-5 w-5 classes (height and width) */
+[class*="h-5"],
+[class*="w-5"] {
+  color: #5c0601 !important;
+}
+
+[class*="h-5"] *,
+[class*="w-5"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with tracking-wide class */
+[class*="tracking-wide"] {
+  color: #5c0601 !important;
+}
+
+[class*="tracking-wide"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with split-text class */
+[class*="split-text"] {
+  color: #5c0601 !important;
+}
+
+[class*="split-text"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with font-weight classes */
+[class*="font-"] {
+  color: #5c0601 !important;
+}
+
+[class*="font-"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with text- classes */
+[class*="text-"] {
+  color: #5c0601 !important;
+}
+
+[class*="text-"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with uppercase class */
+[class*="uppercase"] {
+  color: #5c0601 !important;
+}
+
+[class*="uppercase"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with leading- classes */
+[class*="leading-"] {
+  color: #5c0601 !important;
+}
+
+[class*="leading-"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with text-center class */
+[class*="text-center"] {
+  color: #5c0601 !important;
+}
+
+[class*="text-center"] * {
+  color: #5c0601 !important;
+}
+
+/* PRINCIPAL DEVELOPER FIX: Override text-center color for LinkedIn icons in about modal */
+.about-dialog [class*="text-center"] a[href*="linkedin"] *,
+.about-dialog [class*="text-center"] a[href*="LinkedIn"] *,
+.about-dialog [class*="text-center"] [class*="linkedin"] *,
+.about-dialog [class*="text-center"] [class*="LinkedIn"] *,
+.about-dialog [class*="text-center"] svg,
+.about-dialog [class*="text-center"] svg *,
+.about-dialog [class*="text-center"] svg path,
+.about-dialog [class*="text-center"] svg rect,
+.about-dialog [class*="text-center"] svg circle {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* MORE SPECIFIC OUR TEAM BUTTON TARGETING */
+
+/* Target the specific button structure from minified JS */
+button[class*="inline-flex"][class*="items-center"] {
+  color: #5c0601 !important;
+  background-color: white !important;
+  border-color: #5c0601 !important;
+}
+
+button[class*="inline-flex"][class*="items-center"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any button that contains "Our Team" text specifically */
+button:has(span:contains("Our Team")),
+button:has(*:contains("Our Team")) {
+  color: #5c0601 !important;
+  background-color: white !important;
+  border-color: #5c0601 !important;
+}
+
+button:has(span:contains("Our Team")) *,
+button:has(*:contains("Our Team")) * {
+  color: #5c0601 !important;
+}
+
+/* Target any element that contains "Our Team" and has button-like styling */
+*:contains("Our Team") {
+  color: #5c0601 !important;
+}
+
+*:contains("Our Team") * {
+  color: #5c0601 !important;
+}
+
+/* Target any button with border and white background */
+button[class*="border"][class*="bg-white"],
+button[class*="border"][style*="background: white"],
+button[class*="border"][style*="background-color: white"] {
+  color: #5c0601 !important;
+}
+
+button[class*="border"][class*="bg-white"] *,
+button[class*="border"][style*="background: white"] *,
+button[class*="border"][style*="background-color: white"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with the specific button classes from minified JS */
+[class*="inline-flex"][class*="items-center"][class*="justify-center"] {
+  color: #5c0601 !important;
+}
+
+[class*="inline-flex"][class*="items-center"][class*="justify-center"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with gap-2 class (spacing) */
+[class*="gap-2"] {
+  color: #5c0601 !important;
+}
+
+[class*="gap-2"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with px-6 py-3 classes (padding) */
+[class*="px-6"],
+[class*="py-3"] {
+  color: #5c0601 !important;
+}
+
+[class*="px-6"] *,
+[class*="py-3"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with rounded-lg class */
+[class*="rounded-lg"] {
+  color: #5c0601 !important;
+}
+
+[class*="rounded-lg"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with transition-all class */
+[class*="transition-all"] {
+  color: #5c0601 !important;
+}
+
+[class*="transition-all"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with duration-300 class */
+[class*="duration-300"] {
+  color: #5c0601 !important;
+}
+
+[class*="duration-300"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with hover:bg- classes */
+[class*="hover:bg-"] {
+  color: #5c0601 !important;
+}
+
+[class*="hover:bg-"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with hover:text- classes */
+[class*="hover:text-"] {
+  color: #5c0601 !important;
+}
+
+[class*="hover:text-"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with focus: classes */
+[class*="focus:"] {
+  color: #5c0601 !important;
+}
+
+[class*="focus:"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with active: classes */
+[class*="active:"] {
+  color: #5c0601 !important;
+}
+
+[class*="active:"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with flex class */
+[class*="flex"] {
+  color: #5c0601 !important;
+}
+
+[class*="flex"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with items-center class */
+[class*="items-center"] {
+  color: #5c0601 !important;
+}
+
+[class*="items-center"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with justify-center class */
+[class*="justify-center"] {
+  color: #5c0601 !important;
+}
+
+[class*="justify-center"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with gap- classes */
+[class*="gap-"] {
+  color: #5c0601 !important;
+}
+
+[class*="gap-"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with max-w- classes */
+[class*="max-w-"] {
+  color: #5c0601 !important;
+}
+
+[class*="max-w-"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with mx-auto class */
+[class*="mx-auto"] {
+  color: #5c0601 !important;
+}
+
+[class*="mx-auto"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with grid class */
+[class*="grid"] {
+  color: #5c0601 !important;
+}
+
+[class*="grid"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with cols- classes */
+[class*="cols-"] {
+  color: #5c0601 !important;
+}
+
+[class*="cols-"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with team-member class */
+[class*="team-member"] {
+  color: #5c0601 !important;
+}
+
+[class*="team-member"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with flex-col class */
+[class*="flex-col"] {
+  color: #5c0601 !important;
+}
+
+[class*="flex-col"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with text-center class */
+[class*="text-center"] {
+  color: #5c0601 !important;
+}
+
+[class*="text-center"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element with the background class */
+[class*="bg-[#101E4E]"],
+[class*="bg-[#101E4E]/90"] {
+  color: white !important;
+}
+
+[class*="bg-[#101E4E]"] *,
+[class*="bg-[#101E4E]/90"] * {
+  color: white !important;
+}
+
+/* Override any inline styles */
+[style*="background-color: rgb(16, 30, 78)"],
+[style*="background-color: #101E4E"] {
+  background-color: #5c0601 !important;
+  color: white !important;
+}
+
+[style*="background-color: rgb(16, 30, 78)"] *,
+[style*="background-color: #101E4E"] * {
+  color: white !important;
+}
+
+/* Force white text for any text element in buttons */
+button span,
+button div {
+  color: white !important;
+}
+
+/* Target all heading elements */
+h1, h2, h3, h4, h5, h6 {
+  color: #5c0601 !important;
+}
+
+/* Target specific text color classes */
+[class*="text-pebble-darkBlue"],
+[class*="text-\[#0b2d5f\]"],
+[class*="text-\[#101E4E\]"] {
+  color: #5c0601 !important;
+}
+
+/* Target paragraph elements */
+p {
+  color: #5c0601 !important;
+}
+
+/* Target span elements */
+span {
+  color: #5c0601 !important;
+}
+
+/* Target div elements */
+div {
+  color: #5c0601 !important;
+}
+
+/* Product section specific targeting - TEXT COLOR ONLY */
+#products-section,
+[class*="products-section"],
+[class*="product-section"] {
+  color: #5c0601 !important;
+}
+
+#products-section *,
+[class*="products-section"] *,
+[class*="product-section"] * {
+  color: #5c0601 !important;
+}
+
+/* Target any element containing "Product" text - TEXT COLOR ONLY */
+*:contains("Product") {
+  color: #5c0601 !important;
+}
+
+*:contains("Product") * {
+  color: #5c0601 !important;
+}
+
+/* Product section text color change - target blue text specifically */
+[class*="text-\[#0b2d5f\]"],
+[class*="text-\[#101E4E\]"],
+[class*="text-\[#1e2d78\]"],
+[class*="text-\[#2d46b9\]"] {
+  color: #5c0601 !important;
+}
+
+/* Target any blue text and change to dark red */
+[style*="color: rgb(11, 45, 95)"],
+[style*="color: #0b2d5f"],
+[style*="color: rgb(16, 30, 78)"],
+[style*="color: #101E4E"],
+[style*="color: rgb(30, 45, 120)"],
+[style*="color: #1e2d78"],
+[style*="color: rgb(45, 70, 185)"],
+[style*="color: #2d46b9"] {
+  color: #5c0601 !important;
+}
+
+/* About section text color */
+.about-section h2,
+.about-section p {
+  color: #5c0601 !important;
+}
+
+/* Services section text color */
+.services-section h2,
+.services-section h3,
+.services-section p {
+  color: #5c0601 !important;
+}
+
+/* Product section text color */
+.product-section h2,
+.product-section h3,
+.product-section p {
+  color: #5c0601 !important;
+}
+
+/* About dialog text color */
+.about-dialog h2,
+.about-dialog p {
+  color: #5c0601 !important;
+}
+
+/* About dialog input border */
+.about-dialog input,
+.about-dialog textarea {
+  border-color: #5c0601 !important;
+}
+
+/* LinkedIn icon button - COMPREHENSIVE TARGETING */
+.linkedin-button,
+.about-dialog .linkedin-button,
+.about-dialog button:contains("LinkedIn"),
+.about-dialog a:contains("LinkedIn"),
+.about-dialog [href*="linkedin"],
+.about-dialog [href*="LinkedIn"],
+*:contains("LinkedIn") {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.linkedin-button *,
+.about-dialog .linkedin-button *,
+.about-dialog button:contains("LinkedIn") *,
+.about-dialog a:contains("LinkedIn") *,
+.about-dialog [href*="linkedin"] *,
+.about-dialog [href*="LinkedIn"] *,
+*:contains("LinkedIn") * {
+  color: white !important;
+}
+
+/* Target LinkedIn icon specifically */
+.about-dialog svg,
+.about-dialog [class*="linkedin"],
+.about-dialog [class*="LinkedIn"] {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target the specific LinkedIn button in about dialog */
+.about-dialog a[href*="linkedin"],
+.about-dialog a[href*="LinkedIn"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog a[href*="linkedin"] *,
+.about-dialog a[href*="LinkedIn"] * {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target SVG paths specifically */
+.about-dialog svg path,
+.about-dialog svg rect,
+.about-dialog svg circle {
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target any element with bg-pebble-darkBlue class in about dialog */
+.about-dialog [class*="bg-pebble-darkBlue"] {
+  background-color: #0077B5 !important;
+}
+
+.about-dialog [class*="bg-pebble-darkBlue"] * {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target the specific button styling from the minified JS ONLY in about dialog */
+.about-dialog a[class*="absolute bottom-2 right-2"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog a[class*="absolute bottom-2 right-2"] * {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target rounded-full class ONLY in about dialog */
+.about-dialog [class*="rounded-full"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog [class*="rounded-full"] * {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target shadow-md class ONLY in about dialog */
+.about-dialog [class*="shadow-md"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog [class*="shadow-md"] * {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target p-2 class ONLY in about dialog */
+.about-dialog [class*="p-2"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog [class*="p-2"] * {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target text-white class ONLY in about dialog */
+.about-dialog [class*="text-white"] {
+  color: white !important;
+}
+
+.about-dialog [class*="text-white"] * {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target hover:bg-[#0077B5] class ONLY in about dialog */
+.about-dialog [class*="hover:bg-[#0077B5]"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog [class*="hover:bg-[#0077B5]"] * {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target transition-colors class ONLY in about dialog */
+.about-dialog [class*="transition-colors"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog [class*="transition-colors"] * {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target duration-300 class ONLY in about dialog */
+.about-dialog [class*="duration-300"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog [class*="duration-300"] * {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Get in Touch modal text and styling */
+.contact-modal h2,
+.contact-modal p,
+.contact-modal h1,
+.contact-modal h3,
+.contact-modal h4,
+.contact-modal h5,
+.contact-modal h6,
+.contact-modal span,
+.contact-modal div {
+  color: #5c0601 !important;
+}
+
+/* Contact modal input borders - COMPREHENSIVE TARGETING */
+.contact-modal input,
+.contact-modal textarea,
+.contact-modal select,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+textarea,
+select {
+  border-color: #5c0601 !important;
+  color: #5c0601 !important;
+}
+
+/* Contact modal input focus states */
+.contact-modal input:focus,
+.contact-modal textarea:focus,
+.contact-modal select:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #5c0601 !important;
+  outline-color: #5c0601 !important;
+  box-shadow: 0 0 0 2px rgba(92, 6, 1, 0.2) !important;
+}
+
+/* Target any element containing "Get in Touch" or "Contact" text */
+*:contains("Get in Touch"),
+*:contains("Contact"),
+*:contains("contact") {
+  color: #5c0601 !important;
+}
+
+*:contains("Get in Touch") *,
+*:contains("Contact") *,
+*:contains("contact") * {
+  color: #5c0601 !important;
+}
+
+/* Universal input border targeting */
+input,
+textarea,
+select {
+  border-color: #5c0601 !important;
+}
+
+/* Override any inline border styles */
+[style*="border-color"] {
+  border-color: #5c0601 !important;
+}
+
+/* Send Message button - COMPREHENSIVE TARGETING */
+.send-message-button,
+button:contains("Send Message"),
+button:contains("Send"),
+button:contains("Submit"),
+*:contains("Send Message"),
+*:contains("Send") {
+  background-color: #5c0601 !important;
+  color: white !important;
+}
+
+.send-message-button *,
+button:contains("Send Message") *,
+button:contains("Send") *,
+button:contains("Submit") *,
+*:contains("Send Message") *,
+*:contains("Send") * {
+  color: white !important;
+}
+
+/* Target any button with send/submit functionality */
+button[type="submit"],
+input[type="submit"] {
+  background-color: #5c0601 !important;
+  color: white !important;
+}
+
+button[type="submit"] *,
+input[type="submit"] * {
+  color: white !important;
+}
+
+/* Associated with text */
+.associated-text {
+  font-weight: bold !important;
+  color: #5c0601 !important;
+}
+
+/* Partner logos spacing */
+.partner-logos {
+  gap: 1rem !important;
+  padding: 1rem !important;
+}
+
+/* Partner logo sizing */
+.partner-logo {
+  max-width: 120px !important;
+  height: auto !important;
+}
+
+/* SPECIFIC LINKEDIN ICON TARGETING FOR ABOUT DIALOG ONLY */
+
+/* Target the LinkedIn button specifically in about dialog */
+.about-dialog a[href*="linkedin"],
+.about-dialog a[href*="LinkedIn"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+/* Target the LinkedIn icon SVG within the about dialog */
+.about-dialog a[href*="linkedin"] svg,
+.about-dialog a[href*="LinkedIn"] svg {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target SVG paths specifically within about dialog LinkedIn button */
+.about-dialog a[href*="linkedin"] svg path,
+.about-dialog a[href*="linkedin"] svg rect,
+.about-dialog a[href*="linkedin"] svg circle,
+.about-dialog a[href*="LinkedIn"] svg path,
+.about-dialog a[href*="LinkedIn"] svg rect,
+.about-dialog a[href*="LinkedIn"] svg circle {
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target any element with bg-pebble-darkBlue class ONLY in about dialog */
+.about-dialog [class*="bg-pebble-darkBlue"] {
+  background-color: #0077B5 !important;
+}
+
+.about-dialog [class*="bg-pebble-darkBlue"] svg {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target the specific button styling from the minified JS ONLY in about dialog */
+.about-dialog a[class*="absolute bottom-2 right-2"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog a[class*="absolute bottom-2 right-2"] svg {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target rounded-full class ONLY in about dialog */
+.about-dialog [class*="rounded-full"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog [class*="rounded-full"] svg {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target shadow-md class ONLY in about dialog */
+.about-dialog [class*="shadow-md"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog [class*="shadow-md"] svg {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target p-2 class ONLY in about dialog */
+.about-dialog [class*="p-2"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog [class*="p-2"] svg {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target text-white class ONLY in about dialog */
+.about-dialog [class*="text-white"] {
+  color: white !important;
+}
+
+.about-dialog [class*="text-white"] svg {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target hover:bg-[#0077B5] class ONLY in about dialog */
+.about-dialog [class*="hover:bg-[#0077B5]"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog [class*="hover:bg-[#0077B5]"] svg {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target transition-colors class ONLY in about dialog */
+.about-dialog [class*="transition-colors"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog [class*="transition-colors"] svg {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Target duration-300 class ONLY in about dialog */
+.about-dialog [class*="duration-300"] {
+  background-color: #0077B5 !important;
+  color: white !important;
+}
+
+.about-dialog [class*="duration-300"] svg {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* CTA Section Background Gradient Update */
+/* Target the specific CTA section with blue gradient */
+#cta-section[class*="bg-gradient-to-b"] {
+  background: linear-gradient(to bottom, white, #E5D5C8) !important;
+}
+
+/* Alternative targeting for the gradient classes */
+[class*="from-white"][class*="to-[#D3E4FD]"] {
+  background: linear-gradient(to bottom, white, #E5D5C8) !important;
+}
+
+/* Target any element with the specific blue gradient */
+[class*="bg-gradient-to-b"][class*="from-white"] {
+  background: linear-gradient(to bottom, white, #E5D5C8) !important;
+}
+
+/* Target the CTA section specifically */
+section[id="cta-section"] {
+  background: linear-gradient(to bottom, white, #E5D5C8) !important;
+}
+
+/* Target any section with overflow-hidden and py-32 classes */
+section[class*="overflow-hidden"][class*="py-32"] {
+  background: linear-gradient(to bottom, white, #E5D5C8) !important;
+}
+
+/* Target any element with the exact blue color #D3E4FD */
+[style*="#D3E4FD"],
+[class*="#D3E4FD"] {
+  background: linear-gradient(to bottom, white, #E5D5C8) !important;
+}
+
+/* Bharat VR Card Background Gradient Update */
+/* Target the specific Bharat VR card with blue gradient */
+[class*="bg-gradient-to-br"][class*="from-pebble-offWhite"][class*="to-pebble-lightBlue"] {
+  background: linear-gradient(to bottom right, #F5F5F0, #E5D5C8) !important;
+}
+
+/* Target any element with pebble-lightBlue gradient */
+[class*="to-pebble-lightBlue"] {
+  background: linear-gradient(to bottom right, #F5F5F0, #E5D5C8) !important;
+}
+
+/* Target any element with from-pebble-offWhite to-pebble-lightBlue */
+[class*="from-pebble-offWhite"][class*="to-pebble-lightBlue"] {
+  background: linear-gradient(to bottom right, #F5F5F0, #E5D5C8) !important;
+}
+
+/* Target any element with bg-gradient-to-br and pebble colors */
+[class*="bg-gradient-to-br"][class*="pebble-lightBlue"] {
+  background: linear-gradient(to bottom right, #F5F5F0, #E5D5C8) !important;
+}
+
+/* Target product cards with specific structure */
+[class*="border-pebble-lightBeige"][class*="bg-gradient-to-br"] {
+  background: linear-gradient(to bottom right, #F5F5F0, #E5D5C8) !important;
+}
+
+/* Target any div with shadow-lg and gradient */
+div[class*="shadow-lg"][class*="bg-gradient-to-br"] {
+  background: linear-gradient(to bottom right, #F5F5F0, #E5D5C8) !important;
+}
+
+/* Target any element with rounded-lg and gradient */
+[class*="rounded-lg"][class*="bg-gradient-to-br"] {
+  background: linear-gradient(to bottom right, #F5F5F0, #E5D5C8) !important;
+}
+
+/* Target any element with overflow-hidden and gradient */
+[class*="overflow-hidden"][class*="bg-gradient-to-br"] {
+  background: linear-gradient(to bottom right, #F5F5F0, #E5D5C8) !important;
+}
+
+/* Target any element with group class and gradient */
+[class*="group"][class*="bg-gradient-to-br"] {
+  background: linear-gradient(to bottom right, #F5F5F0, #E5D5C8) !important;
+}
+
+/* Body Text Color Update - Dark Grey for Brand Consistency */
+/* Exclude hero section and Join Hands with Us section */
+
+/* Target paragraph elements but exclude hero and CTA sections */
+p:not([class*="hero"]):not([class*="cta"]):not(#hero-section p):not(#cta-section p) {
+  color: #4A4A4A !important;
+}
+
+/* Target div text but exclude hero and CTA sections */
+div:not([class*="hero"]):not([class*="cta"]):not(#hero-section div):not(#cta-section div) {
+  color: #4A4A4A !important;
+}
+
+/* Target span elements but exclude hero and CTA sections */
+span:not([class*="hero"]):not([class*="cta"]):not(#hero-section span):not(#cta-section span) {
+  color: #4A4A4A !important;
+}
+
+/* Target specific text classes but exclude hero and CTA */
+[class*="text-pebble-secondaryText"]:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+[class*="text-pebble-charcoal"]:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+[class*="text-pebble-taupe"]:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+/* Target about section text */
+.about-section p:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+.about-section div:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+.about-section span:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+/* Target services section text */
+.services-section p:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+.services-section div:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+.services-section span:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+/* Target product section text */
+.product-section p:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+.product-section div:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+.product-section span:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+/* Target team section text */
+.team-section p:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+.team-section div:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+.team-section span:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+/* Target footer text */
+footer p:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+footer div:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+footer span:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+/* Target any element with font-fustat class but exclude hero and CTA */
+[class*="font-fustat"]:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+/* Target any element with font-medium class but exclude hero and CTA */
+[class*="font-medium"]:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+/* Target any element with text-sm or text-base classes but exclude hero and CTA */
+[class*="text-sm"]:not(#hero-section *):not(#cta-section *),
+[class*="text-base"]:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+/* Target card descriptions and content */
+[class*="card"] p:not(#hero-section *):not(#cta-section *),
+[class*="card"] div:not(#hero-section *):not(#cta-section *),
+[class*="card"] span:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+/* Target any element with mb-6 class (common for descriptions) but exclude hero and CTA */
+[class*="mb-6"]:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+/* Target any element with mb-4 class but exclude hero and CTA */
+[class*="mb-4"]:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+/* Target any element with mb-8 class but exclude hero and CTA */
+[class*="mb-8"]:not(#hero-section *):not(#cta-section *) {
+  color: #4A4A4A !important;
+}
+
+/* Override the previous broad text targeting with specific exclusions */
+p:not(#hero-section p):not(#cta-section p):not([class*="text-pebble-offWhite"]) {
+  color: #4A4A4A !important;
+}
+
+span:not(#hero-section span):not(#cta-section span):not([class*="text-pebble-offWhite"]) {
+  color: #4A4A4A !important;
+}
+
+div:not(#hero-section div):not(#cta-section div):not([class*="text-pebble-offWhite"]) {
+  color: #4A4A4A !important;
+}
+
+/* TRIKONANTARA Logo Text - Principal Developer Implementation */
+/* TRIKONANTARA logo text - WHITE by default */
+nav *:contains("TRIKONANTARA"),
+header *:contains("TRIKONANTARA"),
+.nav-floating *:contains("TRIKONANTARA"),
+.navbar *:contains("TRIKONANTARA") {
+  color: white !important;
+}
+
+/* TRIKONANTARA logo text - BRAND BROWN when scrolled */
+.navbar.scrolled *:contains("TRIKONANTARA"),
+.nav-floating.scrolled *:contains("TRIKONANTARA") {
+  color: #5c0601 !important;
+}
+
+/* Hero Section Text - Keep White */
+#hero-section,
+#hero-section *,
+[class*="hero-section"],
+[class*="hero-section"] * {
+  color: white !important;
+}
+
+/* Hero section specific text targeting */
+#hero-section p,
+#hero-section h1,
+#hero-section h2,
+#hero-section h3,
+#hero-section h4,
+#hero-section h5,
+#hero-section h6,
+#hero-section div,
+#hero-section span {
+  color: white !important;
+}
+
+/* Navigation Menu Items - Principal Developer Fix */
+/* Menu items (About, Services, Product) - WHITE text with NO background by default */
+nav a:contains("About"),
+nav button:contains("About"),
+nav a:contains("Services"), 
+nav button:contains("Services"),
+nav a:contains("Product"),
+nav button:contains("Product"),
+.nav-floating a:contains("About"),
+.nav-floating button:contains("About"),
+.nav-floating a:contains("Services"),
+.nav-floating button:contains("Services"),
+.nav-floating a:contains("Product"),
+.nav-floating button:contains("Product") {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+/* Navigation links - white by default */
+nav a,
+nav button,
+nav span,
+nav div,
+.nav-floating a,
+.nav-floating button,
+.nav-floating span,
+.nav-floating div {
+  color: white !important;
+}
+
+/* Override any existing navigation color rules for default state - PRINCIPAL DEVELOPER FIX */
+.nav-floating:not(.scrolled) *,
+.navbar:not(.scrolled) *,
+header:not(.scrolled) * {
+  color: white !important;
+}
+
+/* Force navigation text to WHITE when not scrolled - CRITICAL FIX */
+.nav-floating:not(.scrolled) *:contains("TRIKONANTARA"),
+.nav-floating:not(.scrolled) *:contains("About"),
+.nav-floating:not(.scrolled) *:contains("Services"),
+.nav-floating:not(.scrolled) *:contains("Product"),
+.navbar:not(.scrolled) *:contains("TRIKONANTARA"),
+.navbar:not(.scrolled) *:contains("About"),
+.navbar:not(.scrolled) *:contains("Services"),
+.navbar:not(.scrolled) *:contains("Product"),
+header:not(.scrolled) *:contains("TRIKONANTARA"),
+header:not(.scrolled) *:contains("About"),
+header:not(.scrolled) *:contains("Services"),
+header:not(.scrolled) *:contains("Product") {
+  color: white !important;
+}
+
+/* Additional specificity for navigation elements */
+nav:not(.scrolled) *,
+nav:not(.scrolled) a,
+nav:not(.scrolled) button,
+nav:not(.scrolled) span,
+nav:not(.scrolled) div {
+  color: white !important;
+}
+
+/* Darker body text color update */
+/* Override previous dark grey with much darker color */
+p:not(#hero-section p):not(#cta-section p):not([class*="text-pebble-offWhite"]) {
+  color: #2C2C2C !important;
+}
+
+span:not(#hero-section span):not(#cta-section span):not([class*="text-pebble-offWhite"]) {
+  color: #2C2C2C !important;
+}
+
+div:not(#hero-section div):not(#cta-section div):not([class*="text-pebble-offWhite"]) {
+  color: #2C2C2C !important;
+}
+
+/* Update all section text with darker color */
+.about-section p:not(#hero-section *):not(#cta-section *),
+.about-section div:not(#hero-section *):not(#cta-section *),
+.about-section span:not(#hero-section *):not(#cta-section *) {
+  color: #2C2C2C !important;
+}
+
+.services-section p:not(#hero-section *):not(#cta-section *),
+.services-section div:not(#hero-section *):not(#cta-section *),
+.services-section span:not(#hero-section *):not(#cta-section *) {
+  color: #2C2C2C !important;
+}
+
+.product-section p:not(#hero-section *):not(#cta-section *),
+.product-section div:not(#hero-section *):not(#cta-section *),
+.product-section span:not(#hero-section *):not(#cta-section *) {
+  color: #2C2C2C !important;
+}
+
+.team-section p:not(#hero-section *):not(#cta-section *),
+.team-section div:not(#hero-section *):not(#cta-section *),
+.team-section span:not(#hero-section *):not(#cta-section *) {
+  color: #2C2C2C !important;
+}
+
+footer p:not(#hero-section *):not(#cta-section *),
+footer div:not(#hero-section *):not(#cta-section *),
+footer span:not(#hero-section *):not(#cta-section *) {
+  color: #2C2C2C !important;
+}
+
+/* Update font classes with darker color */
+[class*="font-fustat"]:not(#hero-section *):not(#cta-section *) {
+  color: #2C2C2C !important;
+}
+
+[class*="font-medium"]:not(#hero-section *):not(#cta-section *) {
+  color: #2C2C2C !important;
+}
+
+[class*="text-sm"]:not(#hero-section *):not(#cta-section *),
+[class*="text-base"]:not(#hero-section *):not(#cta-section *) {
+  color: #2C2C2C !important;
+}
+
+[class*="card"] p:not(#hero-section *):not(#cta-section *),
+[class*="card"] span:not(#hero-section *):not(#cta-section *),
+[class*="card"] div:not(#hero-section *):not(#cta-section *) {
+  color: #2C2C2C !important;
+}
+
+[class*="mb-6"]:not(#hero-section *):not(#cta-section *),
+[class*="mb-4"]:not(#hero-section *):not(#cta-section *),
+[class*="mb-8"]:not(#hero-section *):not(#cta-section *) {
+  color: #2C2C2C !important;
+}
+
+/* Typography - Funnel Display for Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Funnel Display', sans-serif !important;
+  color: #5c0601 !important;
+}
+
+
+
+/* Specific heading targeting */
+[class*="font-funnel"],
+[class*="font-bold"],
+[class*="text-3xl"],
+[class*="text-4xl"],
+[class*="text-2xl"],
+[class*="text-xl"] {
+  font-family: 'Funnel Display', sans-serif !important;
+}
+
+/* Typography - Fustat for Body Text */
+p, span, div, body {
+  font-family: 'Fustat', sans-serif !important;
+}
+
+/* Specific body text targeting */
+[class*="font-fustat"] {
+  font-family: 'Fustat', sans-serif !important;
+}
+
+[class*="font-medium"] {
+  font-family: 'Fustat', sans-serif !important;
+}
+
+[class*="text-base"],
+[class*="text-sm"],
+[class*="text-xs"] {
+  font-family: 'Fustat', sans-serif !important;
+}
+
+/* Card content typography */
+[class*="card"] p,
+[class*="card"] span,
+[class*="card"] div {
+  font-family: 'Fustat', sans-serif !important;
+}
+
+/* Footer typography */
+footer p,
+footer span,
+footer div {
+  font-family: 'Fustat', sans-serif !important;
+}
+
+/* Navigation typography */
+nav p,
+nav span,
+nav div {
+  font-family: 'Fustat', sans-serif !important;
+}
+
+/* Ensure proper font loading */
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:opsz,wght@15..40,400;15..40,500;15..40,600;15..40,700;15..40,800;15..40,900&family=Fustat:wght@300;400;500;600;700&display=swap');
+
+/* About Section - Add space between "About" and "Trikonantara" */
+.about-section h2:contains("About Trikonantara")::before {
+  content: "About ";
+  letter-spacing: 0.2em;
+}
+
+.about-section h2:contains("About Trikonantara") {
+  letter-spacing: 0.1em;
+  word-spacing: 0.3em;
+}
+
+/* Target any heading containing "About Trikonantara" */
+h2:contains("About Trikonantara"),
+h1:contains("About Trikonantara"),
+h3:contains("About Trikonantara") {
+  word-spacing: 0.3em !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Navigation Menu Items Hover - Principal Designer Implementation */
+/* When scrolled (white floating background) - Brand Brown underline on hover */
+.nav-floating.scrolled nav a:hover,
+.nav-floating.scrolled nav button:hover,
+.navbar.scrolled nav a:hover,
+.navbar.scrolled nav button:hover,
+.nav-floating.scrolled a:hover,
+.nav-floating.scrolled button:hover,
+.navbar.scrolled a:hover,
+.navbar.scrolled button:hover {
+  text-decoration: underline !important;
+  text-decoration-color: #5c0601 !important;
+  text-underline-offset: 4px !important;
+  border-bottom: 2px solid #5c0601 !important;
+}
+
+/* Menu items specific hover when scrolled */
+.nav-floating.scrolled a:contains("About"):hover,
+.nav-floating.scrolled button:contains("About"):hover,
+.nav-floating.scrolled a:contains("Services"):hover,
+.nav-floating.scrolled button:contains("Services"):hover,
+.nav-floating.scrolled a:contains("Product"):hover,
+.nav-floating.scrolled button:contains("Product"):hover,
+.navbar.scrolled a:contains("About"):hover,
+.navbar.scrolled button:contains("About"):hover,
+.navbar.scrolled a:contains("Services"):hover,
+.navbar.scrolled button:contains("Services"):hover,
+.navbar.scrolled a:contains("Product"):hover,
+.navbar.scrolled button:contains("Product"):hover {
+  border-bottom: 2px solid #5c0601 !important;
+  text-decoration: underline !important;
+  text-decoration-color: #5c0601 !important;
+}
+
+/* Override any existing blue underline styles */
+.nav-floating.scrolled *:hover,
+.navbar.scrolled *:hover {
+  text-decoration-color: #5c0601 !important;
+  border-bottom-color: #5c0601 !important;
+}
+
+/* Remove default blue underline completely */
+.nav-floating.scrolled nav a:hover,
+.nav-floating.scrolled nav button:hover,
+.navbar.scrolled nav a:hover,
+.navbar.scrolled nav button:hover {
+  text-decoration-color: #5c0601 !important;
+}
+
+/* Footer Text - Make Darker - SPECIFIC TARGETING ONLY */
+/* Target footer text with pebble-charcoal class - FOOTER ONLY */
+footer [class*="text-pebble-charcoal"],
+footer .text-pebble-charcoal {
+  color: #1A1A1A !important;
+}
+
+/* Target footer text with pebble-secondaryText class - FOOTER ONLY */
+footer [class*="text-pebble-secondaryText"],
+footer .text-pebble-secondaryText {
+  color: #1A1A1A !important;
+}
+
+/* Target footer text by content */
+footer p,
+footer div,
+footer span {
+  color: #1A1A1A !important;
+}
+
+/* Target specific footer elements */
+footer [class*="text-xs"],
+footer [class*="text-sm"],
+footer .text-xs,
+footer .text-sm {
+  color: #1A1A1A !important;
+}
+
+/* Target copyright text specifically */
+*:contains("© 2025 Trikonantara"),
+*:contains("contactus@trikonantara.com"),
+*:contains("+91 9493803629"),
+*:contains("18-4-174, Near Munurkapu") {
+  color: #1A1A1A !important;
+}
+
+/* Override any existing body text color for footer */
+footer p:not(#hero-section *):not(#cta-section *),
+footer div:not(#hero-section *):not(#cta-section *),
+footer span:not(#hero-section *):not(#cta-section *) {
+  color: #1A1A1A !important;
+}
+
+/* Target any element with font-fustat class in footer */
+footer [class*="font-fustat"],
+footer .font-fustat {
+  color: #1A1A1A !important;
+}
+
+/* Target any element with space-y class in footer */
+footer [class*="space-y"],
+footer .space-y-2 {
+  color: #1A1A1A !important;
+}
+
+/* Target any element with mt-4 class in footer */
+footer [class*="mt-4"],
+footer .mt-4 {
+  color: #1A1A1A !important;
+}
+
+/* Force override any inline styles in footer */
+footer [style*="color"],
+footer * {
+  color: #1A1A1A !important;
+}
+
+/* Target footer by ID or class if it exists */
+#footer,
+.footer,
+[class*="footer"] {
+  color: #1A1A1A !important;
+}
+
+#footer *,
+.footer *,
+[class*="footer"] * {
+  color: #1A1A1A !important;
+}
+
+/* Target the specific footer structure from the JS */
+footer [class*="text-xs"][class*="text-pebble-charcoal"],
+footer [class*="text-xs"][class*="font-fustat"],
+footer [class*="mt-4"][class*="text-xs"] {
+  color: #1A1A1A !important;
+}
+
+/* Target any div with space-y-2 class in footer */
+footer div[class*="space-y-2"],
+footer div[class*="space-y-2"] * {
+  color: #1A1A1A !important;
+}
+
+/* EXPLORE OUR STORY Button - Make Primary in About Section */
+/* Target the specific button in about section */
+.about-section button:contains("Explore Our Story"),
+.about-section button:contains("EXPLORE OUR STORY"),
+*:contains("Explore Our Story") button,
+*:contains("EXPLORE OUR STORY") button {
+  background-color: #5c0601 !important;
+  color: white !important;
+  border-color: #5c0601 !important;
+}
+
+.about-section button:contains("Explore Our Story") *,
+.about-section button:contains("EXPLORE OUR STORY") *,
+*:contains("Explore Our Story") button *,
+*:contains("EXPLORE OUR STORY") button * {
+  color: white !important;
+}
+
+/* Hero Section - Get in Touch Button Text Brand Brown */
+#hero-section button:contains("Get in Touch"),
+#hero-section button:contains("GET IN TOUCH"),
+[class*="hero-section"] button:contains("Get in Touch"),
+[class*="hero-section"] button:contains("GET IN TOUCH") {
+  color: #5c0601 !important;
+  background-color: white !important;
+  border-color: #5c0601 !important;
+}
+
+#hero-section button:contains("Get in Touch") *,
+#hero-section button:contains("GET IN TOUCH") *,
+[class*="hero-section"] button:contains("Get in Touch") *,
+[class*="hero-section"] button:contains("GET IN TOUCH") * {
+  color: #5c0601 !important;
+}
+
+/* Target any element in about section with specific text */
+.about-section *:contains("About Trikonantara") {
+  word-spacing: 0.3em !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Target any element with about section classes */
+[class*="about"] h2,
+[class*="about"] h1,
+[class*="about"] h3 {
+  word-spacing: 0.3em !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Target headings in about section specifically */
+section[class*="about"] h2,
+section[class*="about"] h1,
+section[class*="about"] h3 {
+  word-spacing: 0.3em !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Target any heading with "About" text */
+h1:contains("About"),
+h2:contains("About"),
+h3:contains("About") {
+  word-spacing: 0.3em !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* PRINCIPAL DEVELOPER - ULTIMATE LINKEDIN ICON WHITE COLOR FIX */
+/* Maximum specificity override for LinkedIn icons in about modal */
+.about-dialog a[href*="linkedin"] svg,
+.about-dialog a[href*="LinkedIn"] svg,
+.about-dialog [class*="linkedin"] svg,
+.about-dialog [class*="LinkedIn"] svg,
+.about-dialog a[href*="linkedin"] svg *,
+.about-dialog a[href*="LinkedIn"] svg *,
+.about-dialog [class*="linkedin"] svg *,
+.about-dialog [class*="LinkedIn"] svg *,
+.about-dialog a[href*="linkedin"] svg path,
+.about-dialog a[href*="LinkedIn"] svg path,
+.about-dialog [class*="linkedin"] svg path,
+.about-dialog [class*="LinkedIn"] svg path,
+.about-dialog a[href*="linkedin"] svg rect,
+.about-dialog a[href*="LinkedIn"] svg rect,
+.about-dialog [class*="linkedin"] svg rect,
+.about-dialog [class*="LinkedIn"] svg rect,
+.about-dialog a[href*="linkedin"] svg circle,
+.about-dialog a[href*="LinkedIn"] svg circle,
+.about-dialog [class*="linkedin"] svg circle,
+.about-dialog [class*="LinkedIn"] svg circle,
+.about-dialog a[href*="linkedin"] svg line,
+.about-dialog a[href*="LinkedIn"] svg line,
+.about-dialog [class*="linkedin"] svg line,
+.about-dialog [class*="LinkedIn"] svg line,
+.about-dialog a[href*="linkedin"] svg polygon,
+.about-dialog a[href*="LinkedIn"] svg polygon,
+.about-dialog [class*="linkedin"] svg polygon,
+.about-dialog [class*="LinkedIn"] svg polygon,
+.about-dialog a[href*="linkedin"] svg polyline,
+.about-dialog a[href*="LinkedIn"] svg polyline,
+.about-dialog [class*="linkedin"] svg polyline,
+.about-dialog [class*="LinkedIn"] svg polyline,
+.about-dialog a[href*="linkedin"] svg ellipse,
+.about-dialog a[href*="LinkedIn"] svg ellipse,
+.about-dialog [class*="linkedin"] svg ellipse,
+.about-dialog [class*="LinkedIn"] svg ellipse {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Override ALL possible class-based selectors for LinkedIn icons */
+.about-dialog [class*="text-center"] a[href*="linkedin"] svg,
+.about-dialog [class*="text-center"] a[href*="LinkedIn"] svg,
+.about-dialog [class*="text-center"] [class*="linkedin"] svg,
+.about-dialog [class*="text-center"] [class*="LinkedIn"] svg,
+.about-dialog [class*="flex"] a[href*="linkedin"] svg,
+.about-dialog [class*="flex"] a[href*="LinkedIn"] svg,
+.about-dialog [class*="flex"] [class*="linkedin"] svg,
+.about-dialog [class*="flex"] [class*="LinkedIn"] svg,
+.about-dialog [class*="items-center"] a[href*="linkedin"] svg,
+.about-dialog [class*="items-center"] a[href*="LinkedIn"] svg,
+.about-dialog [class*="items-center"] [class*="linkedin"] svg,
+.about-dialog [class*="items-center"] [class*="LinkedIn"] svg,
+.about-dialog [class*="justify-center"] a[href*="linkedin"] svg,
+.about-dialog [class*="justify-center"] a[href*="LinkedIn"] svg,
+.about-dialog [class*="justify-center"] [class*="linkedin"] svg,
+.about-dialog [class*="justify-center"] [class*="LinkedIn"] svg,
+.about-dialog [class*="gap-"] a[href*="linkedin"] svg,
+.about-dialog [class*="gap-"] a[href*="LinkedIn"] svg,
+.about-dialog [class*="gap-"] [class*="linkedin"] svg,
+.about-dialog [class*="gap-"] [class*="LinkedIn"] svg * {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Nuclear option - override ANY possible selector combination */
+.about-dialog * a[href*="linkedin"] svg,
+.about-dialog * a[href*="LinkedIn"] svg,
+.about-dialog * [class*="linkedin"] svg,
+.about-dialog * [class*="LinkedIn"] svg,
+.about-dialog * a[href*="linkedin"] svg *,
+.about-dialog * a[href*="LinkedIn"] svg *,
+.about-dialog * [class*="linkedin"] svg *,
+.about-dialog * [class*="LinkedIn"] svg * {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+} 
+
+/* NUCLEAR LINKEDIN ICON WHITE COLOR FIX - EXPERT PRINCIPAL DEVELOPER */
+/* This overrides EVERYTHING - no exceptions */
+.about-dialog svg[class*="lucide-linkedin"],
+.about-dialog svg[class*="lucide-linkedin"] *,
+.about-dialog svg[class*="lucide-linkedin"] path,
+.about-dialog svg[class*="lucide-linkedin"] rect,
+.about-dialog svg[class*="lucide-linkedin"] circle,
+.about-dialog a[href*="linkedin"] svg,
+.about-dialog a[href*="linkedin"] svg *,
+.about-dialog a[href*="linkedin"] svg path,
+.about-dialog a[href*="linkedin"] svg rect,
+.about-dialog a[href*="linkedin"] svg circle,
+.about-dialog a[href*="LinkedIn"] svg,
+.about-dialog a[href*="LinkedIn"] svg *,
+.about-dialog a[href*="LinkedIn"] svg path,
+.about-dialog a[href*="LinkedIn"] svg rect,
+.about-dialog a[href*="LinkedIn"] svg circle,
+.about-dialog [class*="linkedin"] svg,
+.about-dialog [class*="linkedin"] svg *,
+.about-dialog [class*="linkedin"] svg path,
+.about-dialog [class*="linkedin"] svg rect,
+.about-dialog [class*="linkedin"] svg circle,
+.about-dialog [class*="LinkedIn"] svg,
+.about-dialog [class*="LinkedIn"] svg *,
+.about-dialog [class*="LinkedIn"] svg path,
+.about-dialog [class*="LinkedIn"] svg rect,
+.about-dialog [class*="LinkedIn"] svg circle {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* Override every possible class combination that could affect LinkedIn icons */
+.about-dialog [class*="text-"] svg[class*="lucide-linkedin"],
+.about-dialog [class*="text-"] svg[class*="lucide-linkedin"] *,
+.about-dialog [class*="text-"] a[href*="linkedin"] svg,
+.about-dialog [class*="text-"] a[href*="linkedin"] svg *,
+.about-dialog [class*="text-"] a[href*="LinkedIn"] svg,
+.about-dialog [class*="text-"] a[href*="LinkedIn"] svg *,
+.about-dialog [class*="flex"] svg[class*="lucide-linkedin"],
+.about-dialog [class*="flex"] svg[class*="lucide-linkedin"] *,
+.about-dialog [class*="flex"] a[href*="linkedin"] svg,
+.about-dialog [class*="flex"] a[href*="linkedin"] svg *,
+.about-dialog [class*="flex"] a[href*="LinkedIn"] svg,
+.about-dialog [class*="flex"] a[href*="LinkedIn"] svg *,
+.about-dialog [class*="items-center"] svg[class*="lucide-linkedin"],
+.about-dialog [class*="items-center"] svg[class*="lucide-linkedin"] *,
+.about-dialog [class*="items-center"] a[href*="linkedin"] svg,
+.about-dialog [class*="items-center"] a[href*="linkedin"] svg *,
+.about-dialog [class*="items-center"] a[href*="LinkedIn"] svg,
+.about-dialog [class*="items-center"] a[href*="LinkedIn"] svg *,
+.about-dialog [class*="justify-center"] svg[class*="lucide-linkedin"],
+.about-dialog [class*="justify-center"] svg[class*="lucide-linkedin"] *,
+.about-dialog [class*="justify-center"] a[href*="linkedin"] svg,
+.about-dialog [class*="justify-center"] a[href*="linkedin"] svg *,
+.about-dialog [class*="justify-center"] a[href*="LinkedIn"] svg,
+.about-dialog [class*="justify-center"] a[href*="LinkedIn"] svg *,
+.about-dialog [class*="gap-"] svg[class*="lucide-linkedin"],
+.about-dialog [class*="gap-"] svg[class*="lucide-linkedin"] *,
+.about-dialog [class*="gap-"] a[href*="linkedin"] svg,
+.about-dialog [class*="gap-"] a[href*="linkedin"] svg *,
+.about-dialog [class*="gap-"] a[href*="LinkedIn"] svg,
+.about-dialog [class*="gap-"] a[href*="LinkedIn"] svg *,
+.about-dialog [class*="text-center"] svg[class*="lucide-linkedin"],
+.about-dialog [class*="text-center"] svg[class*="lucide-linkedin"] *,
+.about-dialog [class*="text-center"] a[href*="linkedin"] svg,
+.about-dialog [class*="text-center"] a[href*="linkedin"] svg *,
+.about-dialog [class*="text-center"] a[href*="LinkedIn"] svg,
+.about-dialog [class*="text-center"] a[href*="LinkedIn"] svg * {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* ULTIMATE OVERRIDE - Target any SVG in about modal that might be LinkedIn */
+.about-dialog svg[viewBox="0 0 24 24"],
+.about-dialog svg[viewBox="0 0 24 24"] *,
+.about-dialog svg[viewBox="0 0 24 24"] path,
+.about-dialog svg[viewBox="0 0 24 24"] rect,
+.about-dialog svg[viewBox="0 0 24 24"] circle {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+}
+
+/* FINAL NUCLEAR OPTION - Override ANY element in about modal with LinkedIn reference */
+.about-dialog *[class*="linkedin"],
+.about-dialog *[class*="LinkedIn"],
+.about-dialog *[href*="linkedin"],
+.about-dialog *[href*="LinkedIn"] {
+  color: white !important;
+}
+
+.about-dialog *[class*="linkedin"] *,
+.about-dialog *[class*="LinkedIn"] *,
+.about-dialog *[href*="linkedin"] *,
+.about-dialog *[href*="LinkedIn"] * {
+  color: white !important;
+  fill: white !important;
+  stroke: white !important;
+} 

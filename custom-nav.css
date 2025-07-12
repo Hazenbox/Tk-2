@@ -1,0 +1,80 @@
+/* Custom Navigation Styles */
+.nav-floating {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 50 !important;
+  transition: all 0.3s ease !important;
+  background: transparent !important;
+  padding: 1rem 0 !important;
+}
+
+.nav-floating.scrolled {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
+  padding: 0.75rem 0 !important;
+}
+
+/* Target the specific Tailwind CSS color classes used in the navigation */
+.nav-floating.scrolled .text-\[#0b2d5f\],
+.nav-floating.scrolled .text-\[#101E4E\],
+.nav-floating.scrolled .text-\[#1e2d78\],
+.nav-floating.scrolled .text-\[#2d46b9\],
+.nav-floating.scrolled .text-\[#1EAEDB\],
+.nav-floating.scrolled .text-\[#1DA1F2\],
+.nav-floating.scrolled .text-\[#0A66C2\],
+.nav-floating.scrolled [class*="text-[#0b2d5f]"],
+.nav-floating.scrolled [class*="text-[#101E4E]"],
+.nav-floating.scrolled [class*="text-[#1e2d78]"],
+.nav-floating.scrolled [class*="text-[#2d46b9]"],
+.nav-floating.scrolled [class*="text-[#1EAEDB]"],
+.nav-floating.scrolled [class*="text-[#1DA1F2]"],
+.nav-floating.scrolled [class*="text-[#0A66C2]"] {
+  color: #5c0601 !important;
+}
+
+/* Target any element with blue color styles */
+.nav-floating.scrolled [style*="color: rgb(11, 45, 95)"],
+.nav-floating.scrolled [style*="color: #0b2d5f"],
+.nav-floating.scrolled [style*="color: rgb(16, 30, 78)"],
+.nav-floating.scrolled [style*="color: #101E4E"],
+.nav-floating.scrolled [style*="color: rgb(30, 174, 219)"],
+.nav-floating.scrolled [style*="color: #1EAEDB"],
+.nav-floating.scrolled [style*="color: rgb(29, 161, 242)"],
+.nav-floating.scrolled [style*="color: #1DA1F2"],
+.nav-floating.scrolled [style*="color: rgb(10, 102, 194)"],
+.nav-floating.scrolled [style*="color: #0A66C2"] {
+  color: #5c0601 !important;
+}
+
+/* Most aggressive approach - target all elements in scrolled navigation */
+.nav-floating.scrolled * {
+  color: #5c0601 !important;
+}
+
+/* Additional specificity for React components */
+.nav-floating.scrolled button,
+.nav-floating.scrolled a,
+.nav-floating.scrolled span,
+.nav-floating.scrolled div,
+.nav-floating.scrolled h1,
+.nav-floating.scrolled h2,
+.nav-floating.scrolled h3,
+.nav-floating.scrolled h4,
+.nav-floating.scrolled h5,
+.nav-floating.scrolled h6 {
+  color: #5c0601 !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .nav-floating {
+    padding: 0.5rem 0 !important;
+  }
+  
+  .nav-floating.scrolled {
+    padding: 0.25rem 0 !important;
+  }
+} 
